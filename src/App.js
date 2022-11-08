@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Hello from "./component/hello";
+import About from "./component/about";
+import SingleComment from "./component/SingleComponents";
+import elephant from  './image/elephant.jpg'; 
+import UserCard from "./component/usercard";
+import Try from './component/try';
+import "./css/styling.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="text-center">
+          <h3>Welcome To My App!</h3>
+            <UserCard>
+                  <SingleComment name="jack" date="9:42"/>
+            </UserCard>
+            <UserCard>
+
+                <SingleComment name="sara" text="this is react comments"/>
+            </UserCard>
+            <UserCard>
+
+                  <SingleComment name="alex" pic={elephant}/>
+            </UserCard>
+
+            <Try name="deepak"/>
+            
+
     </div>
   );
 }
